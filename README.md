@@ -1,2 +1,2 @@
 # RNAseq
-contains BiocSwirl course covering RNAseq
+contains BiocSwirl course covering the analysis of bulk RNAseq datasets
