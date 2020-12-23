@@ -9,7 +9,7 @@
 
 # Plot sample distance
 - Class: text
-  Output: Let's get an overview over our RNA-seq data by checking how similar or different our samples are to begin with.
+  Output: Let's get an overview of our RNA-seq data by checking how similar or different our samples are at baseline.
   
 - Class: text
   Output: We can assess the similarity between samples by calculating the so called Euclidean Distance. We do this on the transformed data so that all genes contribute approximately equally to this distance.
@@ -49,13 +49,12 @@
   Hint: Try this command pheatmap(sampleDistMatrix, clustering_distance_rows = sampleDist, clustering_distance_cols = sampleDist, col = colors) 
   
 - Class: figure
-  Output: Look at this figure you just created! Take some time to understand what this figure shows you.
-
+  Output: Look at the figure you just created! Take some time to understand what this figure shows you.
   Figure: pheatmap.R
   FigureType: new
   
 - Class: mult_question
-  Output: Which sample is the most different from all the others?
+  Output: Which sample is most different from the others?
   AnswerChoices: Series1_NHBE_SARS.Cov.2_2;Series1_NHBE_SARS.Cov.2_3;Series1_NHBE_Mock_3
   CorrectAnswer: Series1_NHBE_Mock_3
   AnswerTests: omnitest(correctVal='Series1_NHBE_Mock_3')

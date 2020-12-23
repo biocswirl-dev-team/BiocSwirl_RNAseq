@@ -1,9 +1,9 @@
 - Class: meta
   Course: RNA-seq analysis
   Lesson: DESeq2
-  Author: your name goes here
+  Author: Julia Philipp
   Type: Standard
-  Organization: your organization's name goes here
+  Organization: none
   Version: 2.4.5
 
 - Class: text
@@ -23,13 +23,13 @@
 #building results table with comparisons
 
 - Class: cmd_question
-  Output: Now, we can build the results table using the function results(). Assign the results table to "res".
+  Output: Now, we can build the results table using the results() function. Assign the results table to "res".
   CorrectAnswer: res <- results(res_dds)
   AnswerTests: omnitest(correctExpr='res <- results(res_dds)');expr_creates_var('res')
   Hint: Try typing res <- results(res_dds)
   
 - Class: text
-  Output: Since our data only contains two conditions, DESeq will automatically make the right comparison. It will compare condition "treatment" to condition "mock". If we had more than two conditions and wanted more sophisticated comparison, we would need to specify them with the contrast attribute to results().
+  Output: Since our data only contains two conditions, DESeq will automatically make the correct comparison. It will compare condition "treatment" to condition "mock". If we had more than two conditions and wanted more sophisticated comparisons, we would need to specify them with the contrast attribute to results().
   
 - Class: video
   Output: For more information on specifying contrasts, check the bioconductor vignette on RNA-seq and building the results table!
@@ -71,8 +71,9 @@
   
 #correction for multiple testing
 - Class: text
-  Output: In high-throughout experiments, it is important not to use the raw pvalues but to adjust for multiple testing. Explain the need for multiple testing more
-  
+  Output: In high-throughout experiments, it is important not to use the raw pvalues but to adjust for multiple testing.
+# explain the need for multiple testing more
+  s
 - Class: text
   Output: Conveniently, DESeq2 already uses the Benjamini-Hochberg (BH) adjustment. The adjusted pvalue is saved in column 6 of the results table. This adjusted pvalue represents the False Discovery Rate (FDR) for our data.
   

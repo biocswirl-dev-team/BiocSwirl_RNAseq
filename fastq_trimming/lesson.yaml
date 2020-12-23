@@ -3,12 +3,12 @@
   Lesson: fastq_trimming
   Author: Nicolai von Kügelgen, Julia Philipp
   Type: Standard
-  Organization: MDC / BIMSB
+  Organization: none
   Version: 2.4.5
 
 - Class: text
-  Output: The fastq files you obtain from RNA-seq (whether they were deposited online or you are receiving your own new data) will almost always contain some reads or bases with very low quality. Additionally some reads might only cover short RNA fragments, which means that the sequencing adapters used to generated the library are also part of the read sequence. In addition to an introduction to removing these reads or bases, this lesson will cover how to generally asses the quality of RNAseq data in fastq format.
-
+  Output: The fastq files you obtain from an RNA-seq experiment (whether they were deposited online or you are receiving your own new data) will almost always contain some reads or bases with very low quality. Additionally, some reads might only cover short RNA fragments, which means that the sequencing adapters used to generated the library are also part of the read sequence. In addition to an introduction to removing these reads or bases, this lesson will cover how to asses the quality of RNAseq data.
+  
 - Class: text
   Output: Assessment of read quality is often performed using the fastQC program. Find out more about this program here - https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
@@ -85,23 +85,23 @@
   Hint: FastQC checks each sample for the most common sequences and checks them against a small database of known sequences.
   
 - Class: text
-  Output: As with many automated tools, fastQC will almost always detect some sequences that are represnted more often than other in a given ssample, however minor contributions of sequences is usually normal. In doubt blast the sequences to see what the might be!
+  Output: As with many automated tools, fastQC will almost always detect some sequences that are represnted more often than other in a given ssample, however minor contributions of sequences is usually normal. When in doubt, blast the sequences to see what the might be!
   
 - Class: text
-  Output: If fastqc detects a high amount of low quality reads or reads with an high adapter content, it is necessary to remove these low quality reads or read-parts from the data.
-
+  Output: If fastqc detects a high amount of low quality reads, or reads with high adapter content, it is necessary to remove these low quality reads or read-parts from the data.
+  
 - Class: text_question
   # with BiocTerm this could be an expression / command question?
   # is there a way do dynamically determine where the lesson files are & print the corresponding output?
   # -> could also make this a question /command with BiocTerm maybe
-  Output: The example data of this lesson is generally of high quality, but in many cases some samples have low quality reads that should be trimmed and of course all samples need to be processed the same way. A good program to perfrom read trimming is trim_galore. With which command could you perform trimming of the SRR11412215 sample?  
+  Output: The example data of this lesson is generally of high quality, but in many cases samples have low quality reads that should be trimmed. Additionally, it is good practice for all samples to be processed the same way. A good program to perfrom read trimming is trim_galore. With which command could you perform trimming of the SRR11412215 sample? 
   CorrectAnswer: trim_galore SRR11412215.chr20.fq.gz
   AnswerTests: omnitest(correctVal='trim_galore SRR11412215.chr20.fq.gz')
   Hint: trim_galore <filename>
 
 - Class: text
-  Output: trim_galore has a lot of options, however it will usually a quite good good even with default parameters. One important thing to remeber is to pass the --paired options if you have paired-end files. The other options often start becoming relevant when you need to handle specific problems or particularities of the samples.
-
+  Output: trim_galore has many options, however it will usually be quite good good even with default parameters. One important thing to remeber is to pass the --paired options if you have paired-end files. The other options often become relevant when you need to handle specific problems or particularities of the samples.
+  
 - Class: mult_question
   Output: Check the options or trim_galore (trim_galore --help). Which of the following measures can the program not utilize to remove reads?
 

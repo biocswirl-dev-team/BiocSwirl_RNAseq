@@ -1,16 +1,17 @@
 - Class: meta
   Course: rna_seq
   Lesson: save and export
-  Author: your name goes here
+  Author: Julia Philipp
   Type: Standard
-  Organization: your organization's name goes here
+  Organization: none
   Version: 2.4.5
   
 - Class: text
   Output: Congrats on finishing the rna-seq course. Now, before we leave, let's make sure that we have all our data saved.
   
 - Class: cmd_question
-  Output: You can save the so called enrivonment to a file, which will contain all the objects and data that you have currently loaded in your RStudio environment. You can so so with the command save.image() and a path and filename ending in .RData . Try it out!
+  Output: You can do so with the command save.image() and a path and filename ending in .RData . Try it out!
+
   CorrectAnswer: save.image("file.RData")
   AnswerTests: expr_uses_func('save.image')
   Hint: Try using the function save.image()

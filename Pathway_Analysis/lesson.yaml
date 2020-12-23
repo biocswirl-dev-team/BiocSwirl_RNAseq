@@ -1,13 +1,13 @@
 - Class: meta
   Course: RNA-seq analysis
   Lesson: Pathway Analysis
-  Author: your name goes here
+  Author: Julia Philipp
   Type: Standard
-  Organization: your organization's name goes here
+  Organization: none
   Version: 2.4.5
 
 - Class: text
-  Output: Another useful analysis of differentially expressed genes can be gene set enrichment analysis (GSEA) that determines if a significant portion of genes from one set (e.g. differentially expressed genes) belong to a specific group of genes e.g transcription factors etc.
+  Output: Another useful analysis of differentially expressed genes is the gene set enrichment analysis (GSEA), which can be used to determine if a significant portion of genes from one set (e.g. differentially expressed genes) belong to a specific group of genes known as an ontology.
   
 - Class: text
   Output: Before starting this analysis, we will have to extract the top 30 most variable genes from our results again. 

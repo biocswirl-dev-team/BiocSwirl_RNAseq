@@ -1,25 +1,25 @@
 - Class: meta
   Course: RNA-seq analysis
   Lesson: fastq_download
-  Author: Nicolai von Kügelgen
+  Author: Nicolai von Kügelgen, Julia Philipp
   Type: Standard
-  Organization: MDC / BIMSB
+  Organization: none
   Version: 2.4.5
 
 - Class: text
   Output: This lesson will cover the basics of how and where RNAseq data is deposited and how to access it.
   
 - Class: text
-  Output: Because the actual raw data produced by RNA sequencing depends on the technology used and often contains multiple mixed samples, it is not very feasible to store and distribute these files directly. Instead the files that are most commonly used as raw data are FASTQ files.
-
+  Output: Because the raw data produced by RNA sequencing depends on the technology used and often contains multiple multiplexed samples, it is not feasible to store and distribute these files directly. Instead, the files that are most commonly used as raw data are FASTQ files.
+  
 - Class: text_question
   Output: Fastq files are very similar to fasta files, which are used to store multiple sequences in one file. Similarly fastq files store the raw sequences of the reads, but they do more than that. What additional information does a fastq file contain?
   CorrectAnswer: Quality
   AnswerTests: val_matches('[Q|q]uality')
-  Hint: What could the 'q' stand for? RNA sequencing is not perfect and can make errors!
-  
+  Hint: What could the 'q' stand for? RNA sequencing is not perfect and can contain errors!
+
 - Class: text
-  Output: Because fastq files are the raw data upon which all RNA-seq analysis is built, they are often deposited online and made available to other researchers and the general public. This good practice and not only makes science more approachabale and reproducible, but also allows anyone to use such data for further projects.
+  Output: Because fastq files are the raw data upon which all RNA-seq analysis is built, they are often deposited online and made available to other researchers and the general public. This is good practice, as it not only makes science approachabale and reproducible, but also allows anyone to use such data for further projects!
   
 - Class: text_question
   Output: The most important database for RNA-seq datasets is NCBI's GEO database. Look up the GEO accession GSE147507 on the NCBI website. What is the title of that accession?
@@ -35,7 +35,7 @@
   Hint: Check the 'Supplementary file' section on the webpage
 
 - Class: text
-  Output: In order to the database IDs of individual fastq files belonging to a GEO entry (which describes the whole dataset), we have to go to the associated enties of the SRA (sequence read archive).  The SRA run selector will let us select and filter individual samples from the datasets.
+  Output: In order to download individual fastq files belonging to a GEO entry (which describes the whole dataset) from the database, we have to go to the associated enties of the SRA (sequence read archive).  The SRA run selector will let us select and filter individual samples from the datasets.
 
 - Class: exact_question
   Output: How many samples for the human cell line NHBE are there in this dataset?
@@ -44,12 +44,11 @@
   Hint: Activate the filters for 'Cell_Line' and 'Organism' on the top left of the webpage.
 
 - Class: text
-  Output: While the SRA run selector allows you to filter and select specific samples you may be interest in, it does not actually allow you to download the fastq files directly. To get the fastq files you first need to download a list of the SRR accession IDs. These IDs can be used by programs the SRA toolkit (mainly prefetch and fastq-dump) to diretcly download the fastq-files from the NCBI servers. Further information on how to use the SRA toolkit to download data from NCBI can be found on its documentation 'https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc' For the remaining lessons dealing with fastq files, you should use the data supplied with this course, which are 6 samples from the GSE147507 dataset, but only contain reads belonging to a simple chromosome to reduce file size & analysis runtime.
-
+  Output: While the SRA run selector allows you to filter and select specific samples you may be interested in, it does not allow you to download the fastq files directly. To get the fastq files, you first need to download a list of the SRA accession IDs. These IDs can be used by programs such as the SRA toolkit (mainly prefetch and fastq-dump) to then download the fastq-files from the NCBI servers. Further information on how to use the SRA toolkit to download data from NCBI can be found in its documentation at 'https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc'. For the remaining lessons dealing with fastq files you should use the data supplied with this course, which are 6 samples from the GSE147507 dataset, but only contain reads belonging to a single chromosome to reduce file size & analysis runtime.
+  
 - Class: text
-  Output: Take a look at the fastq files - the command "less" is highly recommended since it can look into the files even when they are compressed to reduce file size.
-
-
+  Output: Take a look at the fastq files - the command "less" is highly recommended as it can look into the files even when they are compressed (which they often are in order to reduce file size).
+  
 - Class: exact_question
   Output: A fastq file usually has many entries - one for each sequence. How many lines are there for each entry?
   CorrectAnswer: 4
@@ -61,7 +60,7 @@
   AnswerChoices: Hexadecimal single digits for each base;Quality for the whole read encoded in a text-string;Various ASCII characters represent quality for each base
   CorrectAnswer: Various ASCII characters represent quality for each base
   AnswerTests: omnitest(correctVal= 'Various ASCII characters represent quality for each base')
-  Hint: Compare the length of the quality and sequence strings for each entry and see which characters are used overall in the file
-
+  Hint: Compare the length of the quality and sequence strings for each entry and see which characters are used throughout the file.
+  
 - Class: text
   Output: Dependening the sequencing strategy used by a given experiment you can either have one (single-end sequencing) or two (paired-end sequencing) fastq files for each sample. The samples for this course used single-end sequencing so there is only one file per sample. The GEO database will also always denote whether samples are single- or paired-end and the SRA toolkit will automatically download both fastq files for paired-end samples. It is important to keep in mind whether your data is single- or paired-end, because many commands for later analysis steps change a bit if you have two files per sample.

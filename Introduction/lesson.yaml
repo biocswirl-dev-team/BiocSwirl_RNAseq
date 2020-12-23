@@ -1,9 +1,9 @@
 - Class: meta
   Course: rna_seq
   Lesson: Introduction
-  Author: your name goes here
+  Author: Julia Philipp
   Type: Standard
-  Organization: your organization's name goes here
+  Organization: none
   Version: 2.4.5
 
 - Class: text

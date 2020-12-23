@@ -3,7 +3,7 @@
   Lesson: Pre-Processing
   Author: Julia Philipp
   Type: Standard
-  Organization: your organization's name goes here
+  Organization: none
   Version: 2.4.5
 
 - Class: cmd_question
@@ -27,7 +27,7 @@
 # making deseqdataset object
   
 - Class: cmd_question
-  Output: Next, we will load our gene count table (dataset) into a DESeq2 specific R object, that allows us to store all information associated with our experiment. 
+  Output: Next, we will load our gene count table (dataset) into a DESeq2 specific R object. This allows us to store all information associated with our experiment.
   CorrectAnswer: dds <- DESeqDataSetFromMatrix(dataset, colData, design= ~ condition)
   AnswerTests: omnitest(correctExpr='dds <- DESeqDataSetFromMatrix(dataset, colData, design= ~ condition)')
   Hint: Try dds <- DESeqDataSetFromMatrix(dataset, colData, design= ~ condition)
@@ -70,10 +70,10 @@
   Output: Why do we need to transform our data? Most statistical tests work best on data with the same range of variance. 
   
 - Class: text
-  Output: For RNA-seq data, the variance typically grows with the mean. If we were to do a PCA (principle component analysis) now to look at the variance in the data, the genes with the highest read counts will contribute the most to the overall variance.
+  Output: For RNA-seq data, the variance typically grows with the mean of expression. If we were to do a PCA (principle component analysis) now to look at the variance in the data, the genes with the highest read counts will contribute the most to the overall variance.
   
 - Class: text
-  Output: The DESeq2 package offers two different transformations as solutions for this problem. One of them is the regularized-logarithm transformation or rlog.
+  Output: The DESeq2 package offers two different transformations as solutions for this problem. One of them is the regularized-logarithm transformation, or rlog.
   
 - Class: cmd_question
   Output: Let's transform our data using rlog() and assign the result to rlog_dds. This might take a moment.
@@ -82,7 +82,7 @@
   Hint: Try typing rlog_dds <- rlog(dds)
   
 - Class: text
-  Output: We also need to normalize our data for library size. Different samples and replicates can be sequenced at different depths (total read count in sample) potentially inflating difference in counts between samples and replicates. This means that gene x in sample A could have five times as many reads than the same gene in sample B because it is actually more highly expressed or because sample A had been sequenced more deeply and has more reads over all. We need to eliminate the second option by normalizing for library size.
+  Output: We also need to normalize our data for library size. Different samples and replicates can be sequenced at different depths (total read count in sample) potentially inflating difference in counts between samples and replicates. This means that gene x in sample A could have five times as many reads than the same gene in sample B because it is actually more expressed highly, or because sample A had been sequenced more deeply and thus has more reads over all. We need to eliminate the second option by normalizing for library size.
   
 - Class: text
   Output: Conveniently, the rlog() function has already taken care of that problem for us!
@@ -91,7 +91,7 @@
 # compare read count distributions before and after transformation
 
 - Class: figure
-  Output: Take a moment to look at the difference in total counts and variance between raw and rlog transformed counts. See, how in the raw data, gene with the highest read counts have the highest variance.
+  Output: Take a moment to look at the difference in total counts and variance between raw and rlog transformed counts. See how, in the raw data, genes with the highest read counts have the highest variance
   Figure: transformed_count.R
   FigureType: new
   
