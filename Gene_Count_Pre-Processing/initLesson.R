@@ -9,7 +9,7 @@
   )
 }
 
-dataset <- data.frame(read.table(file.path(.get_course_path(), "rna_seq", "Gene_Count_Pre-Processing", "GSE147507_RawReadCounts_Human_subset.tsv"),
+dataset <- data.frame(read.table(file.path(.get_course_path(), "BiocSwirl_RNAseq", "Gene_Count_Pre-Processing", "GSE147507_RawReadCounts_Human_subset.tsv"),
                       header = TRUE, stringsAsFactors = FALSE))
 dataset <- dataset[,c(1:6)]
 

@@ -9,8 +9,8 @@
   )
 }
 
-load(file.path(.get_course_path(), "rna_seq", "PCA","rlog_dds.RData"))
-load(file.path(.get_course_path(), "rna_seq", "PCA","dds.RData"))
+load(file.path(.get_course_path(), "BiocSwirl_RNAseq", "PCA","rlog_dds.RData"))
+load(file.path(.get_course_path(), "BiocSwirl_RNAseq", "PCA","dds.RData"))
 
 colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
 

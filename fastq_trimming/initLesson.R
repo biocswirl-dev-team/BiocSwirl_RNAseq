@@ -16,13 +16,13 @@ overrepresentedSequences <- data.frame(Sequence = c("GGGCAGGATAGTTCAGACGGTTTCTAT
                                        Possible.Source = c("No Hit", "No Hit", "No Hit", "No Hit", "No Hit", "No Hit", "No Hit", "No Hit", "No Hit"))
 
 
-p1 <- readPNG(file.path(.get_course_path(), 'rna_seq', 'fastq_trimming', 'per-base-quality.png'))
+p1 <- readPNG(file.path(.get_course_path(), 'BiocSwirl_RNAseq', 'fastq_trimming', 'per-base-quality.png'))
 
-p2 <- readPNG(file.path(.get_course_path(), 'rna_seq', 'fastq_trimming', 'base-sequence-content.png'))
+p2 <- readPNG(file.path(.get_course_path(), 'BiocSwirl_RNAseq', 'fastq_trimming', 'base-sequence-content.png'))
 
-p3 <- readPNG(file.path(.get_course_path(), 'rna_seq', 'fastq_trimming', 'seq-len-distr.png'))
+p3 <- readPNG(file.path(.get_course_path(), 'BiocSwirl_RNAseq', 'fastq_trimming', 'seq-len-distr.png'))
 
-report_html <- file.path(get.course_path(), 'rna_seq', 'fastq_trimming', 'SRR11412215_fastqc.html')
+report_html <- file.path(get.course_path(), 'BiocSwirl_RNAseq', 'fastq_trimming', 'SRR11412215_fastqc.html')
 
 # Function for local testing
 #.get_course_path <- function() {'courses'}

@@ -31,8 +31,8 @@ library(TxDb.Hsapiens.UCSC.hg19.knownGene)
 
 txdb <- TxDb.Hsapiens.UCSC.hg19.knownGene
 
-bamfile <- file.path(.get_course_path(), 'rna_seq', 'Read_alignment_quantification', 'SRR11412215_Aligned.sortedByCoord.out.bam')
+bamfile <- file.path(.get_course_path(), 'BiocSwirl_RNAseq', 'Read_alignment_quantification', 'SRR11412215_Aligned.sortedByCoord.out.bam')
 
-salmon.files <- c(file.path(.get_course_path(), 'rna_seq', 'Read_alignment_quantification', 'SRR11412215', 'quant.sf'))
+salmon.files <- c(file.path(.get_course_path(), 'BiocSwirl_RNAseq', 'Read_alignment_quantification', 'SRR11412215', 'quant.sf'))
 
 
