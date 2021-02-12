@@ -73,7 +73,7 @@
 - Class: text
   Output: In high-throughout experiments, it is important not to use the raw pvalues but to adjust for multiple testing.
 # explain the need for multiple testing more
-  s
+
 - Class: text
   Output: Conveniently, DESeq2 already uses the Benjamini-Hochberg (BH) adjustment. The adjusted pvalue is saved in column 6 of the results table. This adjusted pvalue represents the False Discovery Rate (FDR) for our data.
   
