@@ -53,9 +53,9 @@
   
 - Class: mult_question
   Output: Of these choices, which will produce the most accurate and reproducible RNA-seq data set?
-  AnswerChoices: A poly-adenylated RNA-seq library of all immune cells in the spleen, 1 biological replicate; A whole RNA transcriptome of every cell in a tumor, 4 biological replicates; An rRNA depleted RNA-seq library of cortical neuron cells, 6 biological replicates
+  AnswerChoices: A poly-adenylated RNA-seq library of all immune cells in the spleen, 1 biological replicate;A whole RNA transcriptome of every cell in a tumor, 4 biological replicates;An rRNA depleted RNA-seq library of cortical neuron cells, 6 biological replicates
   CorrectAnswer: An rRNA depleted RNA-seq library of cortical neuron cells, 6 biological replicates
-  AnswerTests: omnitest(correctVal='An rRNA depleted RNA-seq library of cotrical neuron cells, 6 biological replicates')
+  AnswerTests: omnitest(correctVal='An rRNA depleted RNA-seq library of cortical neuron cells, 6 biological replicates')
   Hint: The best RNA-seq experiments are of homogeneous cell types with as many biological replicates as possible to capture random variability
   
 - Class: text
