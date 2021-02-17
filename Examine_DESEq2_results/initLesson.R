@@ -24,4 +24,4 @@ if (!requireNamespace("apeglm", quietly = TRUE))
   BiocManager::install("apeglm")
 
 library(DESeq2)
-library(aplegm)
+library(apeglm)
