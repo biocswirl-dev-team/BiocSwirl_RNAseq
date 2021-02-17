@@ -26,3 +26,4 @@ if (!requireNamespace("DESeq2", quietly = TRUE))
   BiocManager::install("DESeq2")
 
 library(hexbin)
+library(DESeq2)
