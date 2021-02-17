@@ -9,12 +9,8 @@
 - Class: text
   Output: Congrats on finishing the rna-seq course. Now, before we leave, let's make sure that we have all our data saved.
   
-- Class: cmd_question
-  Output: You can do so with the command save.image() and a path and filename ending in .RData . Try it out!
-
-  CorrectAnswer: save.image("file.RData")
-  AnswerTests: expr_uses_func('save.image')
-  Hint: Try using the function save.image()
+- Class: text
+  Output: You can do so with the command save.image() and a path and filename ending in .RData
   
 - Class: text
   Output: You can also save individual objects with the command save(). Specify the object and the filename within the parenthesis.
