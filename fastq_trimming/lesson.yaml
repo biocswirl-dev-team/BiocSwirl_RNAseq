@@ -13,14 +13,11 @@
   Output: Assessment of read quality is often performed using the fastQC program. Find out more about this program here - https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
 
-- Class: text_question
+- Class: text
   # with BiocTerm this could be an expression / command question?
   # is there a way do dynamically determine where the lesson files are & print the corresponding output?
   # -> could also make this a question /command with BiocTerm maybe
-  Output: Assume that the fastq files distributed with the previous lesson have beeon copied to your current folder. Give a valid command to run fastQC on the SRR11412215 sample.
-  CorrectAnswer: fastqc -f fastq SRR11412215.chr20.fq.gz
-  AnswerTests: omnitest(correctVal='fastqc -f fastq SRR11412215.chr20.fq.gz')
-  Hint: fastqc -f fastq <filename>
+  Output: The fastq files distributed with the previous lesson have beeon copied to your current folder. The following would be the valid command line command to run fastq on one of those files. "fastqc -f fastq SRR11412215.chr20.fq.gz"
   
 - Class: text  
   Output: This program will produce a single html report for each fastq file it is run on, it can also be run on multiple files at the same time. An example of such a report is included with the files for this lesson, if you can't run it yourself.

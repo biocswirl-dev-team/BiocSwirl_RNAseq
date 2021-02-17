@@ -16,7 +16,7 @@
   Output: Bioconductor is a open source and open development software project for the analysis of genomic/high throughput datasets. The project is based mostly on R packages, e.g. the DESeq2 package that contains functions to help with a differential expression analysis.
   
 - Class: cmd_question
-  Output: Packages from The Comprehensive R Archive Network (CRAN) can be downloaded using the function install.packages(). Within the parenthesis of the function, as a parameter, type the name of the package you would like to install in quotation marks. Let's try to install the package "pheatmaps". Watch for potential prompts that might come up during the installation process.
+  Output: Packages from The Comprehensive R Archive Network (CRAN) can be downloaded using the function install.packages(). Within the parenthesis of the function, as a parameter, type the name of the package you would like to install in quotation marks. Let's try to install the package "pheatmap". Watch for potential prompts that might come up during the installation process.
   CorrectAnswer: install.packages("pheatmap")
   AnswerTests: omnitest(correctExpr='install.packages("pheatmap")')
   Hint: Try typing install.packages("pheatmap")

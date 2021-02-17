@@ -35,7 +35,7 @@
   Hint: Check the 'Supplementary file' section on the webpage
 
 - Class: text
-  Output: In order to download individual fastq files belonging to a GEO entry (which describes the whole dataset) from the database, we have to go to the associated enties of the SRA (sequence read archive).  The SRA run selector will let us select and filter individual samples from the datasets.
+  Output: In order to download individual fastq files belonging to a GEO entry (which describes the whole dataset) from the database, we have to go to the associated entries of the SRA (sequence read archive).  The SRA run selector will let us select and filter individual samples from the datasets.
 
 - Class: exact_question
   Output: How many samples for the human cell line NHBE are there in this dataset?

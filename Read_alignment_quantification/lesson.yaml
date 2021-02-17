@@ -20,7 +20,8 @@
   Output: Compared to mapping to the transcriptome, alignment to the full genome sequence takes much longer, but can possibly identify unkown transcption sites or splice sites.
   
 - Class: mult_question
-  Output: Alignment of RNAseq data to the full genome needs to consider splice sites, since reads can cover two exons that are far away from each other in the reference genome. Which of the following genome alignment programs is not 'splice aware'?  AnswerChoices: Bowtie2;Tophat;STAR
+  Output: Alignment of RNAseq data to the full genome needs to consider splice sites, since reads can cover two exons that are far away from each other in the reference genome. Which of the following genome alignment programs is not 'splice aware'?  
+  AnswerChoices: Bowtie2;Tophat;STAR
   CorrectAnswer: Bowtie2
   AnswerTests: omnitest(correctVal= 'Bowtie2')
   Hint: You can check the descriptions of these tools online.
