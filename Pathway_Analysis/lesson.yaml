@@ -15,7 +15,7 @@
 - Class: cmd_question
   Output: We can extract the rownames (which are the gene names) of the data that went into the heatmap to analyse for gene set enrichment. Use the command rownames() on topGenes to get the gene names. Use the function cat() with the parameter sep = "\n" around the rownames command to print out the gene names in a format that's better suited for copy and paste. Copy the resulting list.
   CorrectAnswer: cat(rownames(topGenes), sep = "\n")
-  AnswerTests: omnitest(correctExpr = 'cat(rownames(topGenes), sep = "\n")')
+  AnswerTests: omnitest(correctExpr='cat(rownames(topGenes), sep = "\n")')
   Hint: Try typing cat(rownames(topGenes), sep = "\n")
   
 - Class: video
