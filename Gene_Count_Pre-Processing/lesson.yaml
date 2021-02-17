@@ -6,13 +6,6 @@
   Organization: none
   Version: 2.4.5
 
-- Class: cmd_question
-  Output: Moving on to gene count pre-processing. We can do that using the Deseq2 package. Let's load it first!
-  CorrectAnswer: library(DESeq2)
-  AnswerTests: omnitest(correctExpr='library(DESeq2)')
-  Hint: Try library(DESeq2)
-  #Comment: this package may not be installed!
-
 # making colData
 # this might have to be adjusted according to upstream workflow
   

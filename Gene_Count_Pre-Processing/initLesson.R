@@ -21,4 +21,8 @@ colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
 if (!requireNamespace("hexbin", quietly = TRUE))
   BiocManager::install("hexbin")
 
+
+if (!requireNamespace("DESeq2", quietly = TRUE))
+  BiocManager::install("DESeq2")
+
 library(hexbin)
