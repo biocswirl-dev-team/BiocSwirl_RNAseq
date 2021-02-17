@@ -20,7 +20,7 @@
   Output: The fastq files distributed with the previous lesson have beeon copied to your current folder. The following would be the valid command line command to run fastq on one of those files. "fastqc -f fastq SRR11412215.chr20.fq.gz"
   
 - Class: text  
-  Output: This program will produce a single html report for each fastq file it is run on, it can also be run on multiple files at the same time. An example of such a report is included with the files for this lesson, if you can't run it yourself.
+  Output: This program will produce a single html report for each fastq file it is run on, it can also be run on multiple files at the same time. An example of such a report is included with the files for this lesson, since you can't run it within R Studio.
   
 - Class: figure
   Output: One of the most important details in the quality report is the average sequencing quality of the reads. The picture shown here is very exemplary and depicts a slightly lower quality at the first few bases of the reads and generally high, but decreasing quality over the length of the average reads.
@@ -29,7 +29,7 @@
   
 - Class: mult_question
   Output: Take some time to look at the sequencing quality report. Which positions within the reads appear to have the highest average quality?
-  AnswerChoices: positions 1-5;positions 6-19;positions 20-69, positions 75-124;positions 125-150
+  AnswerChoices: positions 1-5;positions 6-19;positions 20-69; positions 75-124;positions 125-150
   CorrectAnswer: positions 6-19
   AnswerTests: omnitest(correctVal= "positions 6-19")
   Hint: The quality score of the reads is shown on the y-axis. The position in bp within the reads is shown on the x-axis.
@@ -54,7 +54,7 @@
   
 - Class: mult_question
   Output: What is the approximate length of the marjority of sequencing reads?
-  AnswerChoices: 30-34bp, 140-144bp, 150-152bp
+  AnswerChoices: 30-34bp; 140-144bp; 150-152bp
   CorrectAnswer: 150-152bp
   AnswerTests: omnitest(correctVal = '150-152bp')
   Hint: Where is the peak?
@@ -87,14 +87,11 @@
 - Class: text
   Output: If fastqc detects a high amount of low quality reads, or reads with high adapter content, it is necessary to remove these low quality reads or read-parts from the data.
   
-- Class: text_question
+- Class: text
   # with BiocTerm this could be an expression / command question?
   # is there a way do dynamically determine where the lesson files are & print the corresponding output?
   # -> could also make this a question /command with BiocTerm maybe
-  Output: The example data of this lesson is generally of high quality, but in many cases samples have low quality reads that should be trimmed. Additionally, it is good practice for all samples to be processed the same way. A good program to perfrom read trimming is trim_galore. With which command could you perform trimming of the SRR11412215 sample? 
-  CorrectAnswer: trim_galore SRR11412215.chr20.fq.gz
-  AnswerTests: omnitest(correctVal='trim_galore SRR11412215.chr20.fq.gz')
-  Hint: trim_galore <filename>
+  Output: The example data of this lesson is generally of high quality, but in many cases samples have low quality reads that should be trimmed. Additionally, it is good practice for all samples to be processed the same way. A good program to perfrom read trimming is trim_galore. With the following command, you could perform trimming in your command line - trim_galore SRR11412215.chr20.fq.gz
 
 - Class: text
   Output: trim_galore has many options, however it will usually be quite good good even with default parameters. One important thing to remeber is to pass the --paired options if you have paired-end files. The other options often become relevant when you need to handle specific problems or particularities of the samples.

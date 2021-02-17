@@ -10,7 +10,7 @@
   Output: Once reads have been properly checked for quality they need to be aligned to the genome or transcriptome, so that counts for genes (or transcripts) can be generated. Aliging to the full genome or only the transcriptome are two different approaches, both with different advantages and disadvantages.
 
 - Class: mult_question
-  Output: Which of the following statements is true for mapping reads to the transcriptome?
+  Output: "Which of the following statements is true for mapping reads to the transcriptome?"
   AnswerChoices: Very fast due to smaller search space;Splice sites are not an issue;Unreliable for species with incomplete annotation;All of the other statements
   CorrectAnswer: All of the other statements
   AnswerTests: omnitest(correctVal= 'All of the other statements')
@@ -30,7 +30,7 @@
   Output: Genome alignment programs will produce files in SAM (sequence alignment map) or BAM (its binary compressed counterpart) format. This file type contains - similarly to fastq files - one entry for each read and saves the genome position the read mapped to in addition to all information that was already saved in the fastq file.  
 
 - Class: text
-  Output: While mapping reads to the genome and saving their positions allows for mayn different types analysis, in RNAseq experiments one is usually interest in the number of reads that belong to each gene or transcript. To obtain these numbers, it is necessary to *count reads*. There are multiple programs available to do so that usually take bam files as input. A common one is htseq, which is based on python and also provides packages to write your own counting scripts in python.
+  Output: While mapping reads to the genome and saving their positions allows for many different types of analyses, in RNAseq experiments one is usually interest in the number of reads that belong to each gene or transcript. To obtain these numbers, it is necessary to count reads. There are multiple programs available to do so that usually take bam files as input. A common one is htseq, which is based on python and also provides packages to write your own counting scripts in python.
   
   #BiocTerm: python / htseq excourse?
 - Class: cmd_question
