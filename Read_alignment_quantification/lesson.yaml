@@ -36,8 +36,8 @@
 - Class: cmd_question
   Output: There also exists an R function to count reads in bam files called featureCounts (from the Rsubread package). Use the featureCounts function to assign gene counts for the example bam file included with this course (the file name is stored in the variable bamfile) to an object 'counts'. Remember that the sample from the example dataset comes from human cell lines. The current human genome assembly is "hg38". Use that as value for the "annot.inbuilt" parameter. 
   CorrectAnswer: counts <- featureCounts(bamfile, annot.inbuilt = 'hg38')
-  AnswerTests: omnitest(correctExpr="counts <- featureCounts(bamfile, annot.inbuilt = 'hg38')")
-  Hint: counts <- featureCounts(bamfile, annot.inbuilt = 'hg38')
+  AnswerTests: omnitest(correctExpr='counts <- featureCounts(bamfile, annot.inbuilt = "hg38")')
+  Hint: counts <- featureCounts(bamfile, annot.inbuilt = "hg38")
   
 - Class: text
   Output: In contrast to alignment of reads to the full genome, the strategy of mapping reads to the transcriptome allows faster processing and usually directly generates gene or transcript counts in a single step.

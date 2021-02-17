@@ -24,7 +24,7 @@
 - Class: text_question
   Output: The most important database for RNA-seq datasets is NCBI's GEO database. Look up the GEO accession GSE147507 on the NCBI website. What is the title of that accession?
   CorrectAnswer: Transcriptional response to SARS-CoV-2 infection
-  AnswerTests: omnitest(correctVal = 'Transcriptional response to SARS-CoV-2 infection')
+  AnswerTests: omnitest(correctVal='Transcriptional response to SARS-CoV-2 infection')
   Hint: The accession can be found at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE147507, but just searching for GSE147507 on the web should be sufficient to find it.
 
 - Class: mult_question
@@ -59,7 +59,7 @@
   Output: The sequence quality for each entry is not encoded in the file with numbers, how is the quality for each read written in the file?
   AnswerChoices: Hexadecimal single digits for each base;Quality for the whole read encoded in a text-string;Various ASCII characters represent quality for each base
   CorrectAnswer: Various ASCII characters represent quality for each base
-  AnswerTests: omnitest(correctVal= 'Various ASCII characters represent quality for each base')
+  AnswerTests: omnitest(correctVal='Various ASCII characters represent quality for each base')
   Hint: Compare the length of the quality and sequence strings for each entry and see which characters are used throughout the file.
   
 - Class: text
