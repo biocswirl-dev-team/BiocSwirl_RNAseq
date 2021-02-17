@@ -1,7 +1,7 @@
 # Code placed in this file fill be executed every time the
-      # lesson is started. Any variables created here will show up in
-      # the user's working directory and thus be accessible to them
-      # throughout the lesson.
+    # lesson is started. Any variables created here will show up in
+    # the user's working directory and thus be accessible to them
+    # throughout the lesson.
 
 .get_course_path <- function(){
   tryCatch(swirl:::swirl_courses_dir(),
@@ -16,9 +16,10 @@ load(file.path(.get_course_path(), "BiocSwirl_RNAseq", "Examine_DESeq2_results",
 load(file.path(.get_course_path(), "BiocSwirl_RNAseq", "Examine_DESeq2_results","topGenes.RData"))
 load(file.path(.get_course_path(), "BiocSwirl_RNAseq", "Examine_DESeq2_results","anno_data.RData"))
 load(file.path(.get_course_path(), "BiocSwirl_RNAseq", "PCA","dds.RData"))
-  
+
 if (!requireNamespace("DESeq2", quietly = TRUE))
   BiocManager::install("DESeq2")
 
 if (!requireNamespace("apeglm", quietly = TRUE))
   BiocManager::install("apeglm")
+
