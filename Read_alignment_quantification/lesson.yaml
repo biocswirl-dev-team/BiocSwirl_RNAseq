@@ -35,7 +35,7 @@
   #BiocTerm: python / htseq excourse?
 - Class: cmd_question
   Output: There also exists an R function to count reads in bam files called featureCounts (from the Rsubread package). Use the featureCounts function to assign gene counts for the example bam file included with this course (the file name is stored in the variable bamfile) to an object 'counts'. Remember that the sample from the example dataset comes from human cell lines. The current human genome assembly is "hg38". Use that as value for the "annot.inbuilt" parameter. 
-  CorrectAnswer: counts <- featureCounts(bamfile, annot.inbuilt = 'hg38')
+  CorrectAnswer: counts <- featureCounts(bamfile, annot.inbuilt = "hg38")
   AnswerTests: omnitest(correctExpr='counts <- featureCounts(bamfile, annot.inbuilt = "hg38")')
   Hint: counts <- featureCounts(bamfile, annot.inbuilt = "hg38")
   
@@ -50,7 +50,7 @@
 
 - Class: cmd_question
   Output: Use the tximport function to read the counts generated for the SRR11412215 example into an object called txi. Include the txOut=T option to avoid supplying additional transcripts to gene mappings. The count files are assigned to "salmon.files".
-  CorrectAnswer: txi <- tximport(salmon.files, type = 'salmon', txOut=T)
-  AnswerTests: any_of_exprs("txi <- tximport(salmon.files, type = 'salmon', txOut=T)", "txi <- tximport(salmon.files, txOut=T, type = 'salmon')")
-  Hint: txi <- tximport(salmon.files, type = 'salmon', txOut=T)
+  CorrectAnswer: txi <- tximport(salmon.files, type = "salmon", txOut=T)
+  AnswerTests: any_of_exprs('txi <- tximport(salmon.files, type = "salmon", txOut=T)', 'txi <- tximport(salmon.files, txOut=T, type = "salmon")')
+  Hint: txi <- tximport(salmon.files, type = "salmon", txOut=T)
   
