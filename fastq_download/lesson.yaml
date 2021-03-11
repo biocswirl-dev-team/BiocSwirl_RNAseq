@@ -40,7 +40,7 @@
 - Class: exact_question
   Output: How many samples for the human cell line NHBE are there in this dataset?
   CorrectAnswer: 24
-  AnswerTests: omnitest(correctVal=24)
+  AnswerTests: omnitest(correctVal='24')
   Hint: Activate the filters for 'Cell_Line' and 'Organism' on the top left of the webpage.
 
 - Class: text
